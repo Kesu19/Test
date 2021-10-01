@@ -1,0 +1,12 @@
+.barre{
+    color:springgreen;
+    background-color:whitesmoke;
+    width:100%;
+    height: 50px;
+    box-shadow: 4px 6px #666;
+}
+.buton{
+    display: block;
+    margin : auto;
+  
+}

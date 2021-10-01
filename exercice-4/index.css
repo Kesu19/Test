@@ -1,0 +1,10 @@
+
+.map path {
+	fill: #000000;
+	stroke: #ffffff;
+}
+
+.map :hover{
+	fill:#0051ff;
+}
+

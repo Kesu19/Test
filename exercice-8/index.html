@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<title>Jeu de bataille navale</title>
+<meta name="description" content="Un jeu de bataille navale programmé en JavaScript."/>
+<style>
+	.caseBataille{
+		width:20px;
+		height:20px;
+		text-align:center;
+        border: 1px solid black;
+	}
+    #jeu{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    width: 300px;
+    margin: auto;
+    }
+    .boutonC{
+        display: block;
+        margin : auto;
+        text-align:center;
+    }
+</style>
+</head>
+ 
+<body>
+<div>
+    <h1 class="boutonC">Bataille navale</h1>
+<section id="jeu">
+<div></div>
+<div class="caseBataille">A</div>
+<div class="caseBataille">B</div> 
+<div class="caseBataille">C</div>
+<div class="caseBataille">D</div>
+<div class="caseBataille">E</div>
+<div class="caseBataille">F</div>
+<div class="caseBataille">G</div>
+<div class="caseBataille">H</div>
+<div class="caseBataille">I</div>
+<div class="caseBataille">J</div>
+<div class="caseBataille">K</div>
+<div class="caseBataille">L</div>
+
+<div class="caseBataille">1</div>
+<div class="caseBataille" id="A1" data-index="A1"></div>
+<div class="caseBataille" id="B1" data-index="B1"></div>
+<div class="caseBataille" id="C1" data-index="C1"></div>
+<div class="caseBataille" id="D1" data-index="D1"></div>
+<div class="caseBataille" id="E1" data-index="E1"></div>
+<div class="caseBataille" id="F1" data-index="F1"></div>
+<div class="caseBataille" id="G1" data-index="G1"></div>
+<div class="caseBataille" id="H1" data-index="H1"></div>
+<div class="caseBataille" id="I1" data-index="I1"></div>
+<div class="caseBataille" id="J1" data-index="J1"></div>
+<div class="caseBataille" id="K1" data-index="K1"></div>
+<div class="caseBataille" id="L1" data-index="L1"></div>
+
+<div class="caseBataille">2</div>
+<div class="caseBataille" id="A2" data-index="A2"></div>
+<div class="caseBataille" id="B2" data-index="B2"></div>
+<div class="caseBataille" id="C2" data-index="C2"></div>
+<div class="caseBataille" id="D2" data-index="D2"></div>
+<div class="caseBataille" id="E2" data-index="E2"></div>
+<div class="caseBataille" id="F2" data-index="F2"></div>
+<div class="caseBataille" id="G2" data-index="G2"></div>
+<div class="caseBataille" id="H2" data-index="H2"></div>
+<div class="caseBataille" id="I2" data-index="I2"></div>
+<div class="caseBataille" id="J2" data-index="J2"></div>
+<div class="caseBataille" id="K2" data-index="K2"></div>
+<div class="caseBataille" id="L2" data-index="L2"></div>
+
+<div class="caseBataille">3</div>
+<div class="caseBataille" id="A3" data-index="A3"></div>
+<div class="caseBataille" id="B3" data-index="B3"></div>
+<div class="caseBataille" id="C3" data-index="C3"></div>
+<div class="caseBataille" id="D3" data-index="D3"></div>
+<div class="caseBataille" id="E3" data-index="E3"></div>
+<div class="caseBataille" id="F3" data-index="F3"></div>
+<div class="caseBataille" id="G3" data-index="G3"></div>
+<div class="caseBataille" id="H3" data-index="H3"></div>
+<div class="caseBataille" id="I3" data-index="I3"></div>
+<div class="caseBataille" id="J3" data-index="J3"></div>
+<div class="caseBataille" id="K3" data-index="K3"></div>
+<div class="caseBataille" id="L3" data-index="L3"></div>
+
+<div class="caseBataille">4</div>
+<div class="caseBataille" id="A4" data-index="A4"></div>
+<div class="caseBataille" id="B4" data-index="B4"></div>
+<div class="caseBataille" id="C4" data-index="C4"></div>
+<div class="caseBataille" id="D4" data-index="D4"></div>
+<div class="caseBataille" id="E4" data-index="E4"></div>
+<div class="caseBataille" id="F4" data-index="F4"></div>
+<div class="caseBataille" id="G4" data-index="G4"></div>
+<div class="caseBataille" id="H4" data-index="H4"></div>
+<div class="caseBataille" id="I4" data-index="I4"></div>
+<div class="caseBataille" id="J4" data-index="J4"></div>
+<div class="caseBataille" id="K4" data-index="K4"></div>
+<div class="caseBataille" id="L4" data-index="L4"></div>
+
+<div class="caseBataille">5</div>
+<div class="caseBataille" id="A5" data-index="A5"></div>
+<div class="caseBataille" id="B5" data-index="B5"></div>
+<div class="caseBataille" id="C5" data-index="C5"></div>
+<div class="caseBataille" id="D5" data-index="D5"></div>
+<div class="caseBataille" id="E5" data-index="E5"></div>
+<div class="caseBataille" id="F5" data-index="F5"></div>
+<div class="caseBataille" id="G5" data-index="G5"></div>
+<div class="caseBataille" id="H5" data-index="H5"></div>
+<div class="caseBataille" id="I5" data-index="I5"></div>
+<div class="caseBataille" id="J5" data-index="J5"></div>
+<div class="caseBataille" id="K5" data-index="K5"></div>
+<div class="caseBataille" id="L5" data-index="L5"></div>
+
+<div class="caseBataille">6</div>
+<div class="caseBataille" id="A6" data-index="A6"></div>
+<div class="caseBataille" id="B6" data-index="B6"></div>
+<div class="caseBataille" id="C6" data-index="C6"></div>
+<div class="caseBataille" id="D6" data-index="D6"></div>
+<div class="caseBataille" id="E6" data-index="E6"></div>
+<div class="caseBataille" id="F6" data-index="F6"></div>
+<div class="caseBataille" id="G6" data-index="G6"></div>
+<div class="caseBataille" id="H6" data-index="H6"></div>
+<div class="caseBataille" id="I6" data-index="I6"></div>
+<div class="caseBataille" id="J6" data-index="J6"></div>
+<div class="caseBataille" id="K6" data-index="K6"></div>
+<div class="caseBataille" id="L6" data-index="L6"></div>
+
+<div class="caseBataille">7</div>
+<div class="caseBataille" id="A7" data-index="A7"></div>
+<div class="caseBataille" id="B7" data-index="B7"></div>
+<div class="caseBataille" id="C7" data-index="C7"></div>
+<div class="caseBataille" id="D7" data-index="D7"></div>
+<div class="caseBataille" id="E7" data-index="E7"></div>
+<div class="caseBataille" id="F7" data-index="F7"></div>
+<div class="caseBataille" id="G7" data-index="G7"></div>
+<div class="caseBataille" id="H7" data-index="H7"></div>
+<div class="caseBataille" id="I7" data-index="I7"></div>
+<div class="caseBataille" id="J7" data-index="J7"></div>
+<div class="caseBataille" id="K7" data-index="K7"></div>
+<div class="caseBataille" id="L7" data-index="L7"></div>
+
+<div class="caseBataille">8</div>
+<div class="caseBataille" id="A8" data-index="A8"></div>
+<div class="caseBataille" id="B8" data-index="B8"></div>
+<div class="caseBataille" id="C8" data-index="C8"></div>
+<div class="caseBataille" id="D8" data-index="D8"></div>
+<div class="caseBataille" id="E8" data-index="E8"></div>
+<div class="caseBataille" id="F8" data-index="F8"></div>
+<div class="caseBataille" id="G8" data-index="G8"></div>
+<div class="caseBataille" id="H8" data-index="H8"></div>
+<div class="caseBataille" id="I8" data-index="I8"></div>
+<div class="caseBataille" id="J8" data-index="J8"></div>
+<div class="caseBataille" id="K8" data-index="K8"></div>
+<div class="caseBataille" id="L8" data-index="L8"></div>
+
+<div class="caseBataille">9</div>
+<div class="caseBataille" id="A9" data-index="A9"></div>
+<div class="caseBataille" id="B9" data-index="B9"></div>
+<div class="caseBataille" id="C9" data-index="C9"></div>
+<div class="caseBataille" id="D9" data-index="D9"></div>
+<div class="caseBataille" id="E9" data-index="E9"></div>
+<div class="caseBataille" id="F9" data-index="F9"></div>
+<div class="caseBataille" id="G9" data-index="G9"></div>
+<div class="caseBataille" id="H9" data-index="H9"></div>
+<div class="caseBataille" id="I9" data-index="I9"></div>
+<div class="caseBataille" id="J9" data-index="J9"></div>
+<div class="caseBataille" id="K9" data-index="K9"></div>
+<div class="caseBataille" id="L9" data-index="L9"></div>
+
+<div class="caseBataille">10</div>
+<div class="caseBataille" id="A10" data-index="A10"></div>
+<div class="caseBataille" id="B10" data-index="B10"></div>
+<div class="caseBataille" id="C10" data-index="C10"></div>
+<div class="caseBataille" id="D10" data-index="D10"></div>
+<div class="caseBataille" id="E10" data-index="E10"></div>
+<div class="caseBataille" id="F10" data-index="F10"></div>
+<div class="caseBataille" id="G10" data-index="G10"></div>
+<div class="caseBataille" id="H10" data-index="H10"></div>
+<div class="caseBataille" id="I10" data-index="I10"></div>
+<div class="caseBataille" id="J10" data-index="J10"></div>
+<div class="caseBataille" id="K10" data-index="K10"></div>
+<div class="caseBataille" id="L10" data-index="L10"></div>
+
+    <div class="caseBataille">11</div>
+    <div class="caseBataille" id="A11" data-index="A11"></div>
+    <div class="caseBataille" id="B11" data-index="B11"></div>
+    <div class="caseBataille" id="C11" data-index="C11"></div>
+    <div class="caseBataille" id="D11" data-index="D11"></div>
+    <div class="caseBataille" id="E11" data-index="E11"></div>
+    <div class="caseBataille" id="F11" data-index="F11"></div>
+    <div class="caseBataille" id="G11" data-index="G11"></div>
+    <div class="caseBataille" id="H11" data-index="H11"></div>
+    <div class="caseBataille" id="I11" data-index="I11"></div>
+    <div class="caseBataille" id="J11" data-index="J11"></div>
+    <div class="caseBataille" id="K11" data-index="K11"></div>
+    <div class="caseBataille" id="L11" data-index="L11"></div>
+
+    <div class="caseBataille">12</div>
+    <div class="caseBataille" id="A12" data-index="A12"></div>
+    <div class="caseBataille" id="B12" data-index="B12"></div>
+    <div class="caseBataille" id="C12" data-index="C12"></div>
+    <div class="caseBataille" id="D12" data-index="D12"></div>
+    <div class="caseBataille" id="E12" data-index="E12"></div>
+    <div class="caseBataille" id="F12" data-index="F12"></div>
+    <div class="caseBataille" id="G12" data-index="G12"></div>
+    <div class="caseBataille" id="H12" data-index="H12"></div>
+    <div class="caseBataille" id="I12" data-index="I12"></div>
+    <div class="caseBataille" id="J12" data-index="J12"></div>
+    <div class="caseBataille" id="K12" data-index="K12"></div>
+    <div class="caseBataille" id="L12" data-index="L12"></div>
+
+</section>
+<br/>
+<button class="boutonC" Type="button" onClick="history.go(0)">Recharger la page</button>
+</div>
+<script id="" src="index.js"></script>
+</body>
+</html>

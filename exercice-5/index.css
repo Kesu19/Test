@@ -1,0 +1,16 @@
+.form{
+	text-align: center;
+}
+
+
+
+.case{
+	margin: auto;
+    width: 50%;
+    border: 3px;
+    padding: 10px;
+}
+input{
+	margin: auto;
+	width: 100%;
+}
